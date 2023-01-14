@@ -42,7 +42,6 @@ let weather = {
     }
 };
 
-window.addEventListener('load', background.loadBackground("New+York"));
 window.addEventListener('load', weather.fetchWeather("New York"));
 
 document
