@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script type=’text/javascript’ src="config.js"></script> 
+    <script src="script.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="card">
         <div class="search">
-          <input type="text" class="search-bar">
+          <input type="text" class="search-bar" placeholder="Search" id="search" onfocus="this.value=''">
           <button>
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" 
             height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
@@ -17,6 +23,29 @@
             </svg>
           </button>
         </div>
+        <div class="weather">
+            <h2 class="city" id="city">Weather in New York</h2>
+            <h1 class="temp">51°F</h1>
+            <img src="" alt="" class="icon"/>
+            <div class="description">Cloudy</div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind Speed: 6.2 MPH</div>
+        </div>
     </div>
+    <img id="unsplashImage"/>
 </body>
+<script src="script.js"></script>
+<!-- <script>
+    clientID = "Lw-h_6Nn2e3eUPA3dcSvOpsPuH6jdQ_QtErfRE5s8r0";
+    let city = "New York";
+    let endpoint= `https://api.unsplash.com/photos/random/?client_id=${clientID}&query=${city}`;
+    let background = document.querySelector("body");
+    fetch(endpoint) 
+        .then(function (response) {
+        return response.json(); 
+        })
+        .then(function(jsonData) {
+            background.style.backgroundImage = "url("+ jsonData.urls.regular +")";
+        })
+</script> -->
 </html>
