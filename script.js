@@ -1,7 +1,7 @@
 let background = {
     loadBackground: function(city) {
     let citySearch = city.replace(/\s/g,"+");
-    clientID = "Lw-h_6Nn2e3eUPA3dcSvOpsPuH6jdQ_QtErfRE5s8r0";
+    clientID = config.clientID;
     let endpoint= `https://api.unsplash.com/photos/random/?client_id=${clientID}&query=${citySearch}`;
     let background = document.querySelector("body");
     fetch(endpoint) 
@@ -20,7 +20,7 @@ let weather = {
         this.fetchWeather(i);
         document.getElementById("search").value='';
     },
-    "apiKey": "ff8b85cbe6a39f0e7497223ee8a1f967",
+    "apiKey": config.apiKey,
     fetchWeather: function (city) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&units=imperial`)
         .then((resonse) => resonse.json())
@@ -70,7 +70,6 @@ let weather = {
 };
 
 window.addEventListener('load', weather.fetchWeather("New York"));
-
 
 
 document
