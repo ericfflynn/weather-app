@@ -7,4 +7,10 @@ The main goal of this project was to sharpen my JavaScript skills. This single p
 1. Unplash API - Allows for random image fetch based on keywords
 2. OpenWeatherMap API - Returns current weather based on geo-location input
 
+# Output
+
+<img width="1423" alt="Screenshot 2023-01-17 at 8 45 31 AM" src="https://user-images.githubusercontent.com/89708758/212914974-1af75f75-22bf-488a-9791-153eb674d650.png">
+
+<img width="1301" alt="Screenshot 2023-01-17 at 8 46 39 AM" src="https://user-images.githubusercontent.com/89708758/212915157-3eeb203a-21e6-478c-9e87-f93aa953a776.png">
+
 # References
